@@ -228,7 +228,7 @@ function listarUsuarios(resposta) {
 }
 
 app.get('/', (requisicao, resposta) => {
-    gerarFormularioCadastro(resposta);
+    gerarFormularioCadastro(requisicao,resposta);
 });
 
 app.post('/cadastrarUsuario', (requisicao, resposta) => {
@@ -236,7 +236,7 @@ app.post('/cadastrarUsuario', (requisicao, resposta) => {
 });
 
 app.get('/listarUsuarios', (requisicao, resposta) => {
-    listarUsuarios(resposta);
+    listarUsuarios(requisicao,resposta);
 });
 
 app.listen(porta, host, () => {
